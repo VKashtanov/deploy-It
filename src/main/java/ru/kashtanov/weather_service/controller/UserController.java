@@ -7,6 +7,7 @@ import ru.kashtanov.weather_service.models.User;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class UserController {
 
     @GetMapping("/single_user")
