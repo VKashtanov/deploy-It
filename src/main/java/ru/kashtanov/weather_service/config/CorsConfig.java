@@ -10,11 +10,10 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-//                .allowedOrigins("http://127.0.0.1:3060")
-                .allowedOrigins("*")
-                .allowedMethods("GET", "POST")
+                .allowedOrigins("*")  // Allow any origin
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
-                .allowCredentials(true)
+                .allowCredentials(false) // Disable credentials
                 .maxAge(3600);
     }
 }
