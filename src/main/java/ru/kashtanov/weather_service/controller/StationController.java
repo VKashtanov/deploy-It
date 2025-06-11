@@ -17,7 +17,7 @@ public class StationController {
 
     @GetMapping("/get_command")
     public User getCommand() {
-        System.out.println("get user");
+        System.out.println("get command");
         return new User("sigma", "boy");
     }
 
